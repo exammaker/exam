@@ -10,29 +10,19 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
-	<title>eXAM Contructor</title>
+	<title>Exam Maker</title>
 	<style>
 		html,
 		body {
 			font-family: 'Nunito', sans-serif;
+			height: 100%;
 		}
 
 		#topbar {
-			background-color: #73a4e6;
+			/* background-color: #89bcff; */
+			background-color: skyblue;
 			text-align: center;
-		}
-
-		#weak {
-			color: darkslategrey;
-			font-size: 3.5rem;
-		}
-
-		#strong {
-			color: black;
-		}
-
-		#buttons button {
-			margin-top: 1rem;
+			height: 100%;
 		}
 
 		.dl-horizontal dt,
@@ -61,87 +51,52 @@
 <body>
 	<div class="jumbotron jumbotron-fluid" id="topbar">
 		<div class="container-fluid">
-			<span class="h1" id="weak">e<span id="strong"><strong>XAM</strong></span> Constructor</span>
+			<span class="display-2 font-weight-bold">Exam Maker</span>
 			<hr style="width: 20%; border: 1px solid #609ae6;">
-			<span>For concise and uncluttered question papers</span>
+			<span class="lead">For concise and uncluttered question papers</span>
+		</div>
+		<div class="container-fluid mt-5">
+			<a class="btn btn-success btn-lg" id="launchbutton" href="app/index.html"><span class="h2">Launch</span></a>
 		</div>
 	</div>
 
 	<div class="container-fluid" id="content">
 		<div style="text-align: center;" id="buttons">
-			<a class="btn btn-success btn-lg" id="launchbutton" href="app/index.html"><span class="h2">Launch</span></a>
 			<div class="row">
 				<div class="container-fluid" style="text-align: center;">
-					<button class="btn btn-link">
+					<button class="btn btn-lg btn-link">
             Docs
           </button>
-					<button class="btn btn-link" onclick="javascript:window.location = 'help.html'">
+					<button class="btn btn-lg btn-link" onclick="javascript:window.location = 'help.html'">
             Help
           </button>
 				</div>
 			</div>
 			<span class="small">IE 9+</span>
 		</div>
-		<hr style="width: 60%">
-		<div class="row" style="margin-top: 1rem;">
-			<div class="col">
-			</div>
-			<div class="col-8">
-				<p class="lead">
-					XAM is my simple drag & drop exam/question paper builder for schools, universities, and anyone else;
-					plus it's free and <a href="http://github.com/Omega0x013">open source</a>!
-				</p>
-				<div class="row">
-					<div class="col-md">
-						<p>
-							<h2>What can XAM do?</h2>
-							<dl class="dl-horizontal">
-								<dt>Unique Save Structure</dt>
-								<dd>XAM saves to it's own <code>.exam</code> format to keep everything organised and
-									easy to
-									edit.</dd>
-								<dt>Export to PDF</dt>
-								<dd>When it's printing time, we export exams to PDF to retain their structure.</dd>
-								<dt>Two Sizes</dt>
-								<dd>We can render papers to either A4 or A5, with the same relative size of text,
-									keeping it nice and readable.</dd>
-								<dt>Auto Sized Line Guides</dt>
-								<dd>What's annoying is when you print a paper from a <code>.docx</code> and all the
-									<code>...</code> line guides are messed up. XAM generates them to the specific
-									length required when you export.</dd>
-								<dt></dt>
-							</dl>
-						</p>
-					</div>
-
-					<div class="col-md">
-						<p>
-							<h2>Why "XAM"?</h2>
-							Well, XAM is easy to say and to read, and was far less clunky that the long form - exam
-							constructor
-							<br><br>
-							<h2>How do I start using XAM?</h2>
-							I've constructed XAM to be as simple as possible, while keeping all the functionality of an
-							exam builder. The layout is simple:
-
-							<br><br>
-							<h4>Toolbox</h4>
-							On the left of your screen, you will have the toolbox. From here, you can drag and place any
-							element into your exam. They come in several sections:
-							<ul class="list-unstyled">
-								<li><strong>+</strong> Questions</li>
-								<li><strong>+</strong> Figures</li>
-								<li><strong>+</strong> Spacing</li>
-							</ul>
-
-							<br>
-							<h4>Document</h4>
-							On the right, there is the document you are currently working on
-						</p>
-					</div>
+		<!-- <hr style="width: 60%"> -->
+		<div class="container">
+			<hr>
+			<div class="row">
+				<div class="col-md">
+					<!-- Left -->
+					hello
+				</div>
+				<div class="col-md">
+					<!-- Right -->
+					goodbye
 				</div>
 			</div>
-			<div class="col"></div>
+			<div class="row">
+				<div class="col-md">
+					<!-- Left -->
+					hi
+				</div>
+				<div class="col-md">
+					<!-- Right -->
+					bye
+				</div>
+			</div>
 		</div>
 	</div>
 	<div class="container-fluid" style="text-align: center; padding: 2%;">
