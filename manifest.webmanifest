@@ -1,0 +1,10 @@
+{
+	"name":"Exam Maker",
+	"short_name":"Exam",
+	"start_url":"/",
+	"display":"standalone",
+	"background_color":"#FFFFFF",
+	"scope":"/",
+
+	"description":"Drag & Drop Exam Creator"
+}
