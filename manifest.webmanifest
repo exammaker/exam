@@ -5,6 +5,11 @@
 	"display":"standalone",
 	"background_color":"#FFFFFF",
 	"scope":"/",
+	"orientation":"landscape",
 
-	"description":"Drag & Drop Exam Creator"
+	"description":"Drag & Drop Exam Creator",
+
+	"icons":[
+		{"src":"icon.png", "sizes":"144x144", "type":"image/png"}
+	]
 }
