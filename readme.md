@@ -6,7 +6,7 @@ Exam maker is a free, easy to use exam builder that lets you make exam papers wi
 - [ ] Drag & Drop Question Types
 - [ ] Dynamic References
 
-If anyone wants to help with internationalisation, please feel free to update the menus to your language.
+If anyone wants to help with internationalisation, please feel free to help update the menus to your language.
 
 ## Paper Structure
 
