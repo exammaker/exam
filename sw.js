@@ -18,7 +18,7 @@ self.addEventListener('fetch', function(event) {
 				}
 				var responseToCache = response.clone();
 
-				caches.open(CACHE_NAME)
+				caches.open("runtime_cache")
 				.then(function(cache) {
 					cache.put(event.request, responseToCache);
 				});
