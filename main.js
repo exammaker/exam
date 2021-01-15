@@ -3,5 +3,6 @@
  */
 
 $(function() {
-	console.log("end")
+	$("#body").html("Loaded :)");
+	console.log("end");
 });
