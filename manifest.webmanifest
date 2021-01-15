@@ -5,7 +5,7 @@
 	"display":"standalone",
 	"background_color":"#FFFFFF",
 	"scope":"/",
-	"orientation":"landscape",
+	"orientation":"portrait",
 
 	"description":"Drag & Drop Exam Creator",
 
