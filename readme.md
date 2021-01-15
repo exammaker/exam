@@ -1,5 +1,7 @@
 # [exammaker.github.io](https://exammaker.github.io/)
 
+*Exam Maker definitely needs a better logo, I made the current one on Snapseed in 30 seconds*
+
 Exam maker is a free, easy to use exam builder that lets you make exam papers with a consistent visual format, question and figure numbering and more. Here is a list of the planned features:
 
 - [ ] Dynamic Question and Figure numbering
