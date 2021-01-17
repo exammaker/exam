@@ -2,7 +2,7 @@
  * App Main Script
  */
 
-$(function() {
-	$("#body").html("Loaded :)");
+window.onload = function() {
+	document.getElementById("body").innerHTML = "Loaded :)";
 	console.log("end");
-});
+}
