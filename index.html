@@ -5,21 +5,19 @@
 			console.log("start")
 			// This script is to preregister the service worker, so the fonts and things will be cached.
 			if (!window.indexedDB)
-			{
-				alert("Your browser does not support IndexedDB, you are not able to use Exam Maker. To fix this either change your browser settings or install another browser such as Google Chrome or Mozilla Firefox");
-			}
+				alert("Your browser does not support IndexedDB, you are not able to use Exam Maker. To fix this either change your browser settings or install another browser such as Google Chrome or Mozilla Firefox.");
+				
 			if(!window.isSecureContext)
-			{
-				alert("This is not being served from a secure origin, exam maker will not work");
-			}
+				alert("This is not being served from a secure origin, Exam Maker will not be able to register a service worker.");
+
 			if('serviceWorker' in window.navigator)
-			{
 				window.navigator.serviceWorker.register("/sw.js").then((registration) => {
 					console.log("ServiceWorker registered with scope: ", registration.scope);
 				}, (err) => {
 					console.log("ServiceWorker registration failed: ", err);
 				});
-			}
+			else
+				console.log("SW Not Registerable")
 		</script>
 		<link rel="manifest" href="manifest.webmanifest">
 		<link rel="icon" href="icon.png" type="image/png">
@@ -28,9 +26,12 @@
 		<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
 
+		<!-- Scripts -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="main.js"></script>
+
 		<!-- Meta -->
 		<title>Exam Maker</title>
 	</head> 
 	<body id="body" style="font-family: Nunito, sans-serif;">Loading...</body>
-	<script src="main.js"></script>
 </html>

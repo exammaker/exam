@@ -2,7 +2,8 @@
  * App Main Script
  */
 
+ // fn main()
 window.onload = function() {
-	document.getElementById("body").innerHTML = "Loaded :)";
-	console.log("end");
-}
+	document.getElementById("body").innerHTML = "Failed";
+	$("#body").html = "Loaded";
+};
