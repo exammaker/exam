@@ -3,6 +3,6 @@
  */
 
  // fn main()
-window.onload = function() {
+function main() {
 	document.getElementById("body").innerHTML = "Loaded :)";
 };
