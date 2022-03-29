@@ -6,82 +6,24 @@ which can then be printed to PDF.
 
 ## Structure
 
-A basic example `.exam` file.
+### Version
 
-```json
-{
-    "author": "Author's Name",
-    "date": "AM Tuesday 11 June 2019",
-    "information": [
-        "Use black ink or a black ballpoint pen.",
-        "Fill in all boxes at the top of this page.",
-        "Answer **all** questions",
-        "You must answer the questions in the spaces provided."
-    ],
-    "license": "Not to be distributed until after the examination series has passed.",
-    "questions": [
-        ...
-    ],
-    "version": "0.1.0"
-}
-```
+This string specifies the version of Exam-Maker that was used to generate the `.exam` file. Different major version must display a warning message stating that they are not necessarily compatible with the contents of the file.
 
-### Top-Level Data
+### Meta
 
-Exams consist of two necessary parts:
+This object specifies metadata about the exam; the metadata not being present should not consitute an error.
 
-1. [Version](#version)
-2. [Questions](#questions)
-
-and five optional parts:
-
-1. [Author](#author)
-2. [Date](#date)
-3. [Information](#information)
-4. [License](#license)
-
-#### Version
-
-This string specifies the minimum version of Exam-Maker that should be used to open the file.
-Major version changes should not be used to open each other,
-as there may be breaking changes.
-
-#### Author
-
-This string specifies the name of the person(s)/organisation(s) that authored the exam.
-
-#### Date
-
-This string specifies the date that the exam is specified to start.
-This is text and must be altered and verified by the user.
-
-An example date would be:
-
-```
-AM Tuesday 11 June 2019
-```
-
-#### Information
-
-This array specifies bullet points that will appear in the exam's information section.
-Exam-Maker will fill these by default with standard guidance.
-
-#### License
-
-Licensing information is important,
-as well as the restrictions placed on any party wishing to distribute an exam.
-This section should be considered legally binding,
-and will appear on the back of any printed exam,
-along with appearing in an exam's metadata sections.
+| Name         | Symbol         | Type     | Description                                                                         |
+|--------------|----------------|----------|-------------------------------------------------------------------------------------|
+| Author       | `author`       | `string` | The name of the person(s)/organisation(s) that wrote/administer the exam            |
+| Date         | `date`         | `string` | The date on which the exam is to take place                                         |
+| Information  | `information`  | `array`  | The bullet list of information to appear under the 'INFORMATION heading             |
+| Instructions | `instructions` | `array`  | The bullet list of instructions to appear under the 'INSTRUCTIONS' heading          |
+| License      | `license`      | `string` | The licensing conditions of an exam, may either specify a license URL or conditions |
+| Subtitle     | `subtitle`     | `string` | The subtitle that appears underneath the exam title                                 |
+| Title        | `title`        | `string` | The title that appears at the top of the exam                                       |
 
 ### Questions
 
-The main body of an examination is obviously its questions.
-These are arranged in a direct tree structure.
-
-References ending in a number always point towards questions,
-while references ending in letters are always figures.
-E.g:
-
-- `5.3.2` - The second part of the third part of question five.
-- `5.3.a` - The first figure of the third part of question five.
+This object specifies the content of the exam. Question objects are split into two components: Question and Markscheme. Each question is keyed with a UUID4 that uniquely identifies it for reference purposes.
