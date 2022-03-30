@@ -11,9 +11,9 @@
 
 	"icons":[
 		{
-			"src":"icon.png",
+			"src":"icon.webp",
 			"sizes":"144x144",
-			"type":"image/png",
+			"type":"image/webp",
 			"purpose":"maskable"
 		},
 		{

@@ -96,9 +96,14 @@ Code should be arranged into an object as such:
 
 ### Images
 
-Images should be compressed using
+Images should be stored using WebP;
+users may upload images of other types,
+which must be converted.
 
 ### Markdown
+
+A subset of GFM markdown should be used for block text,
+to allow styled questions.
 
 ## Markschemes
 
